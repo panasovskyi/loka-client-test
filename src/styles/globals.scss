@@ -1,0 +1,34 @@
+@use "./variables" as *;
+
+/* html, body, #__next, #app {
+  
+} */
+
+body {
+  margin: 0;
+  height: 100%;
+  min-height: 100vh;
+
+  font-family: var(--font-montserrat), sans-serif;
+  background-image: url("../../public/img/test/test-bg-image.png");
+  background-size: cover;
+  color: $color-ghost-white;
+  line-height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 16px;
+}

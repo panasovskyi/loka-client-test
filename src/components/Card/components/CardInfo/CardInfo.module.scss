@@ -1,0 +1,76 @@
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__street {
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  &__city {
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  &__details {
+    font-weight: 300;
+    font-size: 12px;
+    color: #e4e4e4;
+  }
+
+  &__prices {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__priceUSDT,
+  &__priceUAH {
+    font-weight: 500;
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px; 
+  }
+
+  &__priceUSDT {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../../../public/img/icons/usdt.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__priceUAH {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../../../public//img/icons/uah.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__meta {
+    font-weight: 300;
+    font-size: 12px;
+    color: #e4e4e4;
+    margin-top: 10px;
+  }
+}

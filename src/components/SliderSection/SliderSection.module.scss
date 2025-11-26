@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.sliderSection {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  &__icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__sliderWrapper {
+    margin-right: -16px;
+  }
+
+  &__link {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
+  }
+}
+
+.icon {
+  color: $color-ghost-white;
+}

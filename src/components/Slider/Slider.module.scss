@@ -1,0 +1,21 @@
+.slider {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 6px;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}

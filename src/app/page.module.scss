@@ -1,0 +1,11 @@
+.page {
+  &__toolbar {
+    margin-bottom: 72px;
+  }
+
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+}
