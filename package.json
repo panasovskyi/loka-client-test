@@ -6,7 +6,7 @@
     "build": "next build",
     "export": "next export",
     "deploy": "next build && next export && gh-pages -d out",
-    "deploy-static": "next build --webpack && gh-pages -d out"
+    "deploy-static": "next build --webpack && gh-pages -d out -f"
   },
   "dependencies": {
     "classnames": "^2.5.1",
