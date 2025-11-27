@@ -1,4 +1,4 @@
-$thumb-size: 30px; 
+$thumb-size: 30px;
 $thumb-radius: $thumb-size / 2;
 $track-color: gray;
 $range-color: linear-gradient(90deg, #b3cfe5 0%, #4a7fa7 43.27%, #1a3d63 100%);
@@ -18,8 +18,6 @@ $range-color: linear-gradient(90deg, #b3cfe5 0%, #4a7fa7 43.27%, #1a3d63 100%);
   height: $thumb-size;
   margin: 0;
   padding: 0;
-  padding-left: $thumb-radius;
-  padding-right: $thumb-radius;
 
   opacity: 0;
   background: none;
@@ -61,8 +59,12 @@ $range-color: linear-gradient(90deg, #b3cfe5 0%, #4a7fa7 43.27%, #1a3d63 100%);
   background: none;
 }
 
-.inputMin { z-index: 6; }
-.inputMax { z-index: 5; }
+.inputMin {
+  z-index: 6;
+}
+.inputMax {
+  z-index: 5;
+}
 
 .slider {
   position: absolute;
