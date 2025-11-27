@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactCompiler: true,
-  output: "export",
-  basePath: "/loka-client-test", // н
+  //output: "export",
+  //basePath: "/loka-client-test",
 };
 
 export default withSvgr(nextConfig);
