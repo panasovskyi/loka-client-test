@@ -4,11 +4,16 @@ import Link from "next/link";
 import FaqIcon from "../../assets/icons/faq.svg";
 import ProfileIcon from "../../assets/icons/profile.svg";
 import FilterIcon from "../../assets/icons/filter.svg";
-import ArrowRightIcon from "../../assets/icons/arrow-right.svg";
 import styles from "./MainToolbar.module.scss";
 import { useState } from "react";
 
-export const MainToolbar = () => {
+type Props = {
+  setIsDropdown: (value: boolean) => void;
+  setIsFilter: (value: boolean) => void;
+  city: string;
+}
+
+export const MainToolbar: React.FC<Props> = ({ setIsDropdown, setIsFilter, city }) => {
   const [isActive, setIsActive] = useState("rent");
 
   return (
@@ -52,29 +57,18 @@ export const MainToolbar = () => {
           }
           onClick={() => setIsActive("profile")}
         >
-          <ProfileIcon
-            className={styles.icon}
-          />
+          <ProfileIcon className={styles.icon} />
         </Link>
       </div>
       <div className={styles.mainToolbar__bottom}>
-        <div className={styles.mainToolbar__dropdown}>
-          <p className={styles.mainToolbar__option}>Ужгород</p>
-          <Link
-            href="/"
-            className={styles.mainToolbar__searchBtn}
-          >
-            <ArrowRightIcon
-              className={styles.icon}
-            />
-          </Link>
-        </div>
-        <button
-          className={styles.mainToolbar__filter}
+        <div
+          className={styles.mainToolbar__dropdown}
+          onClick={() => setIsDropdown(true)}
         >
-          <FilterIcon
-            className={styles.icon}
-          />
+          <p className={styles.mainToolbar__option}>{city}</p>
+        </div>
+        <button className={styles.mainToolbar__filter} onClick={() => setIsFilter(true)}>
+          <FilterIcon className={styles.icon} />
         </button>
       </div>
     </div>

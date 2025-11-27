@@ -1,0 +1,90 @@
+@use "@/styles/variables" as *;
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100vh;
+  padding: 16px;
+
+  backdrop-filter: blur(24px);
+  background-color: rgba(246, 250, 253, 0.01);
+
+  border-top: 0.2px solid $color-ghost-white;
+  border-radius: 40px 40px 0 0;
+
+  &__head {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(26, 61, 99, 0.6);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-bottom: 32px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: $color-ghost-white;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+
+    min-height: 0;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    border: none;
+    padding-inline: 24px;
+    height: 44px;
+    width: 100%;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(246, 250, 253, 0.05);
+
+    font-family: $font-family-secondary;
+    font-weight: 274;
+    font-size: 15px;
+    color: #b4b4b4;
+
+    &Active {
+      background-color: rgba(246, 250, 253, 0.1);
+      font-weight: 500;
+      font-size: 15px;
+      color: $color-ghost-white;
+    }
+  }
+}

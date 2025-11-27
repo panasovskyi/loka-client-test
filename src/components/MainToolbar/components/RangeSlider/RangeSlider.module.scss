@@ -1,0 +1,124 @@
+$thumb-size: 30px; 
+$thumb-radius: $thumb-size / 2;
+$track-color: gray;
+$range-color: linear-gradient(90deg, #b3cfe5 0%, #4a7fa7 43.27%, #1a3d63 100%);
+
+.rangeContainer {
+  position: relative;
+  width: 100%;
+  height: $thumb-size;
+}
+
+.inputMin,
+.inputMax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $thumb-size;
+  margin: 0;
+  padding: 0;
+  padding-left: $thumb-radius;
+  padding-right: $thumb-radius;
+
+  opacity: 0;
+  background: none;
+  border: none;
+  pointer-events: none;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.inputMin::-webkit-slider-thumb,
+.inputMax::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: $thumb-size;
+  height: $thumb-size;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.inputMin::-webkit-slider-runnable-track,
+.inputMax::-webkit-slider-runnable-track {
+  background: none;
+}
+
+.inputMin::-moz-range-thumb,
+.inputMax::-moz-range-thumb {
+  appearance: none;
+  background: transparent;
+  border: none;
+  width: 0;
+  height: 0;
+}
+
+.inputMin::-moz-range-track,
+.inputMax::-moz-range-track {
+  background: none;
+}
+
+.inputMin { z-index: 6; }
+.inputMax { z-index: 5; }
+
+.slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 10px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.sliderTrack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $track-color;
+  border-radius: 8px;
+}
+
+.sliderRange {
+  position: absolute;
+  height: 100%;
+  background: $range-color;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.sliderThumb__left {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(calc(-50% + #{$thumb-radius}), -50%);
+
+  width: $thumb-size;
+  height: $thumb-size;
+
+  background: $range-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8);
+  z-index: 4;
+
+  cursor: pointer;
+}
+.sliderThumb__right {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(calc(-50% - #{$thumb-radius}), -50%);
+
+  width: $thumb-size;
+  height: $thumb-size;
+
+  background: $range-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8);
+  z-index: 4;
+
+  cursor: pointer;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.scss";
 import { Montserrat } from "next/font/google";
 
+
 const montserrat = Montserrat({
   subsets: ["cyrillic"],
   weight: ["300", "400", "500", "600", "700"],
