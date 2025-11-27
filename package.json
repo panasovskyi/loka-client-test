@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "next build",
+    "build": "next build --webpack",
     "export": "next export",
     "deploy": "next build && next export && gh-pages -d out",
     "deploy-static": "next build --webpack && gh-pages -d out -f"
