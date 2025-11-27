@@ -4,7 +4,7 @@ import { MainToolbar } from "@/components/MainToolbar/MainToolbar";
 import styles from "./page.module.scss";
 
 import { SliderSection } from "@/components/SliderSection/SliderSection";
-import Menu from "@/components/Menu/Menu";
+// import Menu from "@/components/Menu/Menu";
 import { useState } from "react";
 import { DropdownWindow } from "@/components/MainToolbar/components/DropdownWindow/DropdownWindow";
 import { FilterWindow } from '@/components/MainToolbar/components/FilterWindow/FilterWindow';
