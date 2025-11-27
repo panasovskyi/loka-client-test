@@ -2,9 +2,9 @@
 
 # Конфігурація для збірки
 [build]
-  command = "npm run build"  # Команда, яку Netlify має запустити для збірки
-  publish = ".next"         # Папка, яку Next.js використовує для збірки
+  command = "npm run build"
+  publish = ".next"
 
 # Встановлення плагіну для Next.js
-[plugins]
+[[plugins]]
   package = "@netlify/plugin-nextjs"
