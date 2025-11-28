@@ -1,0 +1,4 @@
+      Script
+        src=httpstelegram.orgjstelegram-web-app.js
+        strategy=beforeInteractive
+      

@@ -8,31 +8,14 @@
     margin-bottom: 12px;
   }
 
-  &__title {
+  &__link {
     font-weight: 600;
     font-size: 15px;
-  }
-
-  &__icon {
-    display: block;
-    cursor: pointer;
+    color: $color-ghost-white;
+    text-decoration: none;
   }
 
   &__sliderWrapper {
     margin-right: -16px;
   }
-
-  &__link {
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-
-    &:active {
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-    }
-  }
-}
-
-.icon {
-  color: $color-ghost-white;
 }

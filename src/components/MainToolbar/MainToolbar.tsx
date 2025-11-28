@@ -20,7 +20,7 @@ export const MainToolbar: React.FC<Props> = ({ setIsDropdown, setIsFilter, city 
     <div className={styles.mainToolbar}>
       <div className={styles.mainToolbar__top}>
         <Link
-          href="/"
+          href="/faq"
           className={
             isActive === "faq"
               ? `${styles.mainToolbar__link} ${styles.mainToolbar__linkActive}`
@@ -44,12 +44,13 @@ export const MainToolbar: React.FC<Props> = ({ setIsDropdown, setIsFilter, city 
               isActive === "sell" && styles.mainToolbar__btnActive
             }`}
             onClick={() => setIsActive("sell")}
+            disabled
           >
             Продаж
           </button>
         </div>
         <Link
-          href="/"
+          href="/profile"
           className={
             isActive === "profile"
               ? `${styles.mainToolbar__link} ${styles.mainToolbar__linkActive}`
@@ -63,9 +64,9 @@ export const MainToolbar: React.FC<Props> = ({ setIsDropdown, setIsFilter, city 
       <div className={styles.mainToolbar__bottom}>
         <div
           className={styles.mainToolbar__dropdown}
-          onClick={() => setIsDropdown(true)}
+          
         >
-          <p className={styles.mainToolbar__option}>{city}</p>
+          <button className={styles.mainToolbar__option} onClick={() => setIsDropdown(true)}>{city}</button>
         </div>
         <button className={styles.mainToolbar__filter} onClick={() => setIsFilter(true)}>
           <FilterIcon className={styles.icon} />

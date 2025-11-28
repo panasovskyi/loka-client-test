@@ -4,21 +4,25 @@ import { MainToolbar } from "@/components/MainToolbar/MainToolbar";
 import styles from "./page.module.scss";
 
 import { SliderSection } from "@/components/SliderSection/SliderSection";
-// import Menu from "@/components/Menu/Menu";
 import { useState } from "react";
 import { DropdownWindow } from "@/components/MainToolbar/components/DropdownWindow/DropdownWindow";
-import { FilterWindow } from '@/components/MainToolbar/components/FilterWindow/FilterWindow';
+import { FilterWindow } from "@/components/MainToolbar/components/FilterWindow/FilterWindow";
+import {Menu} from '@/components/Menu/Menu';
 
 export default function Homepage() {
   const [isDrodown, setIsDropdown] = useState(false);
   const [isFilter, setIsFilter] = useState(false);
   const [isCity, setIsCity] = useState("Ужгород");
 
-  return (
+  return (  
     <div className={styles.page}>
       <div className="container">
         <div className={styles.page__toolbar}>
-          <MainToolbar setIsDropdown={setIsDropdown} setIsFilter={setIsFilter} city={isCity} />
+          <MainToolbar
+            setIsDropdown={setIsDropdown}
+            setIsFilter={setIsFilter}
+            city={isCity}
+          />
         </div>
         <div className={styles.page__sections}>
           <section className={styles.page__premium}>
@@ -31,7 +35,11 @@ export default function Homepage() {
 
         {isDrodown && (
           <div className={styles.page__modal}>
-            <DropdownWindow setIsDropdown={setIsDropdown} setIsCity={setIsCity} isCity={isCity} />
+            <DropdownWindow
+              setIsDropdown={setIsDropdown}
+              setIsCity={setIsCity}
+              isCity={isCity}
+            />
           </div>
         )}
         {isFilter && (
@@ -39,8 +47,11 @@ export default function Homepage() {
             <FilterWindow setIsFilter={setIsFilter} />
           </div>
         )}
+
+        <div className={styles.page__menu}>
+          <Menu />
+        </div>
       </div>
-      
-    </div>
+      </div>
   );
 }

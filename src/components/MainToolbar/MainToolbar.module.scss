@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use "@/styles/variables" as *;
 
 .mainToolbar {
   display: flex;
@@ -51,6 +51,7 @@
     font-weight: 500;
     font-size: 15px;
     text-align: center;
+    font-family: $font-family-secondary;
     color: $color-gray;
     background-color: transparent;
     border: none;
@@ -63,6 +64,10 @@
     cursor: pointer;
 
     transition: color, background-color 0.3s ease;
+
+    &:disabled {
+      cursor: auto;
+    }
 
     &Active {
       background-color: rgba(246, 250, 253, 0.2);
@@ -92,6 +97,7 @@
 
     cursor: pointer;
 
+
     &::before {
       content: "";
       position: absolute;
@@ -119,6 +125,25 @@
       top: 50%;
       transform: translateY(-50%);
     }
+  }
+
+  &__option {
+    flex-grow: 1; 
+
+    align-self: stretch; 
+
+    display: flex; 
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-family: $font-family-secondary;
+    font-weight: 400;
+font-size: 15px;
+    color: inherit;
+
+    cursor: pointer;
   }
 
   &__filter {

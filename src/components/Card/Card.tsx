@@ -1,15 +1,20 @@
 'use client';
 
+import cn from 'classnames';
 import Link from "next/link";
 import styles from "./Card.module.scss";
 import Image from "next/image";
-import HeartIcon from '../../assets/icons/heart.svg';
+import HeartIcon from '@/assets/icons/heart.svg';
 import { CardInfo } from './components/CardInfo/CardInfo';
+import { useState } from 'react';
 
 export default function Card() {
+  const [isActive, setIsActive] = useState(false);
+
   const handleSaveClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
+    setIsActive(!isActive)
   };
 
   return (
@@ -17,9 +22,10 @@ export default function Card() {
       <div className={styles.card__container}>
         <div className={styles.card__imgWrapper}>
           <button className={styles.card__savedBtn} onClick={handleSaveClick}>
-            <HeartIcon className={styles.card__savedBtnIcon} />
+            <HeartIcon className={cn(styles.card__savedBtnIcon, { [styles.card__savedBtnIconActive]: isActive})} />
           </button>
           <Image
+            className={styles.card__img}
             src="/img/test/test-property-img.webp"
             width={220}
             height={168}

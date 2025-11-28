@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.scss";
 import { Montserrat } from "next/font/google";
-
+import Script from 'next/script';
 
 const montserrat = Montserrat({
   subsets: ["cyrillic"],
@@ -12,11 +12,16 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Loka WebApp",
   description: "Telegram WebApp Example",
-  viewport: "width=device-width, initial-scale=1.0",
   appleWebApp: {
     capable: true,
   },
 };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
