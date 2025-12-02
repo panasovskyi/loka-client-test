@@ -5,7 +5,7 @@ export const Slider = () => {
   return (
     <div className={styles.slider}>
       <div className={styles.slider__track}>
-        <PropertyList cn="slider" />
+        <PropertyList cn="slider" order={false} />
       </div>
     </div>
   );
