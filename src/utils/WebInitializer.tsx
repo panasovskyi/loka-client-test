@@ -7,12 +7,13 @@ const WebInitializer = () => {
     const tg = window?.Telegram?.WebApp;
     if (!tg) return;
     
-    tg.ready();
+    //tg.ready();
     try {
       tg.requestFullscreen();
     } catch (error) {
       console.warn("Помилка requestFullscreen: метод не підтримується.", error);
     }
+    tg.ready();
  //   tg.expand();
  //   tg.setHeaderColor(bg);
   //  tg.setBackgroundColor(bg);
