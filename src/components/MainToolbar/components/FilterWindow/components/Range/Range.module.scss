@@ -1,0 +1,47 @@
+@use "@/styles/variables" as *;
+
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__values {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__field {
+    display: flex;
+    position: relative;
+    width: 100%;
+    border: 0.2px solid rgba(246, 250, 253, 0.7);
+    border-radius: 16px;
+    padding: 40px 12px 10px;
+  }
+
+  &__value {
+    width: 100%;
+    border: none;
+
+    background-color: inherit;
+
+    font-weight: 600;
+    font-size: 20px;
+    font-family: inherit;
+
+    color: $color-ghost-white;
+
+    &:focus {
+      outline: none;
+      color: inherit;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #dcdcdc;
+  }
+}

@@ -1,28 +1,43 @@
-'use client';
+"use client";
 
-import cn from 'classnames';
+import cn from "classnames";
 import Link from "next/link";
 import styles from "./Card.module.scss";
 import Image from "next/image";
-import HeartIcon from '@/assets/icons/heart.svg';
-import { CardInfo } from './components/CardInfo/CardInfo';
-import { useState } from 'react';
+import HeartIcon from "@/assets/icons/heart.svg";
+import { CardInfo } from "./components/CardInfo/CardInfo";
+import { useState } from "react";
 
-export default function Card() {
-  const [isActive, setIsActive] = useState(false);
+type Props = {
+  order: boolean;
+  biggerGap?: string;
+};
+
+export const Card: React.FC<Props> = ({ order, biggerGap }) => {
+  const [isActive, setIsActive] = useState(true);
 
   const handleSaveClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsActive(!isActive)
+    setIsActive(!isActive);
   };
 
   return (
     <Link href="/" className={styles.card}>
-      <div className={styles.card__container}>
+      <div
+        className={cn(styles.card__container, {
+          [styles["card__container--gap"]]: biggerGap,
+        })}
+      >
         <div className={styles.card__imgWrapper}>
+         
+          
           <button className={styles.card__savedBtn} onClick={handleSaveClick}>
-            <HeartIcon className={cn(styles.card__savedBtnIcon, { [styles.card__savedBtnIconActive]: isActive})} />
+            <HeartIcon
+              className={cn(styles.card__savedBtnIcon, {
+                [styles.card__savedBtnIconActive]: isActive,
+              })}
+            />
           </button>
           <Image
             className={styles.card__img}
@@ -33,8 +48,11 @@ export default function Card() {
           />
           <span className={styles.card__premiumLabel}>Преміум</span>
         </div>
-        <CardInfo />
+        <CardInfo order={order} />
+        {biggerGap && (
+          <button className={styles.card__orderBtn}>Підписати договір</button>
+        )}
       </div>
     </Link>
   );
-}
+};

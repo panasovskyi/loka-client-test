@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import Link from 'next/link';
-import GlassNav from "@/assets/menu/glassnav.svg";
+import GlassNav from "@/assets/menu/navbg.svg";
 import HomeIcon from "@/assets/menu/home.svg";
 import SavedIcon from "@/assets/menu/saved.svg";
 import OrdersIcon from "@/assets/menu/orders.svg";
@@ -30,6 +30,7 @@ export const Navbar = () => {
   
   return (
     <div className={styles.navbar}>
+      <GlassNav className={styles.navbar__bg} />
       <ul className={styles.navbar__list}>
         {Object.entries(NAV_LINK).map(([key, value]) => {
           const IconComponent = IconMap[key];

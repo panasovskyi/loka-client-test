@@ -1,0 +1,39 @@
+@use "@/styles/variables" as *;
+
+.toggler {
+  display: flex;
+  flex-grow: 1;
+
+  align-items: center;
+  background-color: rgba(246, 250, 253, 0.1);
+  border-radius: 24px;
+  padding: 4px;
+
+  &__button {
+    display: flex;
+    width: 50%;
+    box-sizing: border-box;
+
+    font-family: $font-family-secondary;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: $color-gray;
+    background-color: transparent;
+    border: none;
+    border-radius: 24px;
+    line-height: 1;
+
+    padding: 10px 0;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: color, background-color 0.3s ease;
+
+    &Active {
+      background: linear-gradient(93deg, #4a7fa7 0%, #1a3d63 100%);
+      color: $color-ghost-white;
+    }
+  }
+}

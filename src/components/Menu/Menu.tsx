@@ -1,19 +1,19 @@
-import Link from "next/link";
-import GlassMap from "@/assets/menu/glassmap.svg";
+'use client';
 
 import styles from "./Menu.module.scss";
 import { Navbar } from './components/Navbar/Navbar';
+import { Map } from './components/Map/Map';
+import { usePathname } from 'next/navigation';
 
- //<GlassMap className={styles.menu__mapBackground} />
 
 export const Menu = () => {
+  const pathname = usePathname(); 
+
   return (
     <nav className={styles.menu}>
-      <div className={styles.menu__mapWrapper}>
-        <Link href="/map" className={styles.menu__mapLink}>
-          Мапа
-        </Link>
-      </div>
+      {pathname === '/' && (
+        <Map />
+      )}
       <Navbar />
     </nav>
   );

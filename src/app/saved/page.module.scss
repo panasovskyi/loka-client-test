@@ -1,0 +1,11 @@
+@use "@/styles/variables" as *;
+
+.saved {
+  &__filled {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding-block: 16px 104px;
+  }
+}

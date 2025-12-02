@@ -1,7 +1,11 @@
 import LocationIcon from "../../../../assets/icons/location.svg";
 import styles from "./CardInfo.module.scss";
 
-export const CardInfo = () => {
+type Props = {
+  order: boolean;
+}
+
+export const CardInfo: React.FC<Props> = ({order}) => {
   return (
     <div className={styles.cardInfo}>
       <div className={styles.cardInfo__address}>
@@ -16,7 +20,7 @@ export const CardInfo = () => {
         <span className={styles.cardInfo__priceUSDT}>400 USDT</span>
         <span className={styles.cardInfo__priceUAH}>16,839 грн</span>
       </div>
-      <p className={styles.cardInfo__meta}>Дата публікації: 10.12.2025</p>
+      {order || <p className={styles.cardInfo__meta}>Дата публікації: 10.12.2025</p>}
     </div>
   );
 };

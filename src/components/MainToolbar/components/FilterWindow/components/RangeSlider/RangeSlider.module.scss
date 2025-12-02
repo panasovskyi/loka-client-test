@@ -1,0 +1,127 @@
+$thumb-size: 30px;
+$thumb-radius: 15px;
+$track-color: gray;
+$range-color: linear-gradient(90deg, #b3cfe5 0%, #4a7fa7 43.27%, #1a3d63 100%);
+
+.rangeContainer {
+  position: relative;
+  width: 100%;
+  height: $thumb-size;
+}
+
+.inputMin,
+.inputMax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $thumb-size;
+  margin: 0;
+  padding: 0;
+
+  opacity: 0;
+  background: none;
+  border: none;
+  pointer-events: none;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  z-index: 3;
+}
+
+.inputMin::-webkit-slider-thumb,
+.inputMax::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: $thumb-size;
+  height: $thumb-size;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.inputMin::-webkit-slider-runnable-track,
+.inputMax::-webkit-slider-runnable-track {
+  background: none;
+}
+
+.inputMin::-moz-range-thumb,
+.inputMax::-moz-range-thumb {
+  appearance: none;
+  background: transparent;
+  border: none;
+  width: 0;
+  height: 0;
+}
+
+.inputMin::-moz-range-track,
+.inputMax::-moz-range-track {
+  background: none;
+}
+
+.slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 10px;
+  border-radius: 8px;
+  z-index: 1;
+
+  left: $thumb-radius;
+  width: calc(100% - #{$thumb-size});
+}
+
+.sliderTrack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $track-color;
+  border-radius: 8px;
+}
+
+.sliderRange {
+  position: absolute;
+  height: 100%;
+  background: $range-color;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.sliderThumb__left {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  width: $thumb-size;
+  height: $thumb-size;
+
+
+  z-index: 4;
+
+  cursor: pointer;
+
+    background-image: url("../../../../../../../public/img/icons/slider-thumb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sliderThumb__right {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: $thumb-size;
+  height: $thumb-size;
+
+  z-index: 4;
+
+  cursor: pointer;
+
+  background-image: url("../../../../../../../public/img/icons/slider-thumb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

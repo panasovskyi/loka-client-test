@@ -1,5 +1,21 @@
 .propertyList {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  &--slider {
+    display: flex;
+    list-style: none;
+    gap: 6px;
+  }
+
+  &__item--slider {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 240px;
+  }
+
+  &--saved,
+  &--orders {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+  }
 }

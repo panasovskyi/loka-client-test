@@ -1,0 +1,42 @@
+@use "@/styles/variables" as *;
+
+.date {
+  list-style: none;
+
+  display: flex;
+  gap: 4px;
+
+  &__item {
+    flex-basis: 33.333%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $font-family-secondary;
+    font-weight: 500;
+    font-size: 15px;
+    height: 44px;
+    width: 100%;
+    color: inherit;
+
+    border-radius: 24px;
+    border: none;
+    padding: 0px 24px;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    background: rgba(246, 250, 253, 0.1);
+
+    cursor: pointer;
+
+    
+    &Active {
+      background: linear-gradient(93deg, #4a7fa7 0%, #1a3d63 100%);
+    }
+  }
+}

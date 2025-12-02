@@ -5,76 +5,6 @@
   flex-direction: column;
   gap: 20px;
 
-  &__top {
-    display: flex;
-    gap: 8px;
-  }
-
-  &__link {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-    background: rgba(246, 250, 253, 0.1);
-    width: 44px;
-    min-width: 44px;
-    height: 44px;
-    border-radius: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: transparent;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease;
-
-    &Active {
-      background: rgba(246, 250, 253, 0.2);
-    }
-  }
-
-  &__toggler {
-    display: flex;
-    flex-grow: 1;
-
-    align-items: center;
-    background-color: rgba(246, 250, 253, 0.1);
-    border-radius: 24px;
-    padding: 4px;
-  }
-
-  &__btn {
-    display: flex;
-    width: 50%;
-    box-sizing: border-box;
-
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 15px;
-    text-align: center;
-    font-family: $font-family-secondary;
-    color: $color-gray;
-    background-color: transparent;
-    border: none;
-    border-radius: 24px;
-    line-height: 1;
-
-    padding: 10px 0;
-    justify-content: center;
-
-    cursor: pointer;
-
-    transition: color, background-color 0.3s ease;
-
-    &:disabled {
-      cursor: auto;
-    }
-
-    &Active {
-      background-color: rgba(246, 250, 253, 0.2);
-      color: $color-ghost-white;
-    }
-  }
-
   &__bottom {
     display: flex;
     gap: 8px;
@@ -96,7 +26,6 @@
     background: rgba(246, 250, 253, 0.1);
 
     cursor: pointer;
-
 
     &::before {
       content: "";
@@ -128,11 +57,11 @@
   }
 
   &__option {
-    flex-grow: 1; 
+    flex-grow: 1;
 
-    align-self: stretch; 
+    align-self: stretch;
 
-    display: flex; 
+    display: flex;
     align-items: center;
     border: none;
     padding: 0;
@@ -140,7 +69,7 @@
     background: transparent;
     font-family: $font-family-secondary;
     font-weight: 400;
-font-size: 15px;
+    font-size: 15px;
     color: inherit;
 
     cursor: pointer;

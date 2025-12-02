@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.scss";
 import { Montserrat } from "next/font/google";
 import Script from 'next/script';
+import WebInitializer from '@/utils/WebInitializer';
 
 const montserrat = Montserrat({
   subsets: ["cyrillic"],
@@ -27,7 +28,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="uk">
+      <head><Script
+        src="https://telegram.org/js/telegram-web-app.js"
+        strategy="beforeInteractive"
+        async={true}
+      /></head>
+
       <body className={`${montserrat.variable}`}>
+        
+        <WebInitializer />
         {children}
       </body>
     </html>

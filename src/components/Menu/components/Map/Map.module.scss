@@ -1,0 +1,27 @@
+@use "@/styles/variables" as *;
+
+.map {
+  position: relative;
+  height: 32px;
+  margin: 0 auto;
+
+  &__bg {
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 174px;
+  }
+
+  &__link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: $font-family-secondary;
+    font-weight: 500;
+    font-size: 15px;
+    color: $color-ghost-white;
+    text-decoration: none;
+  }
+}

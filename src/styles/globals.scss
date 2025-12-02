@@ -4,14 +4,38 @@
   
 } */
 
+#root {
+  padding-top: env(safe-area-inset-top, 48px);
+}
+
+/* header {
+  margin-top: -40px;
+ 
+} */
+
 body {
   margin: 0;
   height: 100%;
   min-height: 100vh;
   font-family: var(--font-montserrat), sans-serif;
-  background-color: rgb(3, 40, 53);
-//  background-image: url("../../public/img/test/test-bg-image.png");
-  background-size: cover;
+  
+// background-image: url("../../public/img/test/Rectangle.png");
+
+
+
+// background: red;
+background-image: url("../../public/img/test/bg-10K-PNG.png");
+background-image: url("../../public/img/test/bg-3K-JPG.jpg");
+background-image: url("../../public/img/test/bg-2K-PNG.png");
+
+background-repeat: no-repeat;
+background-size: cover;
+
+// padding-top: 140px;
+
+min-height: 100vh;
+
+  
   color: $color-ghost-white;
   line-height: auto;
 }
@@ -29,6 +53,41 @@ li {
   padding: 0;
 }
 
-.container {
-  padding: 16px;
+ul {
+  list-style: none;
 }
+
+.container {
+  padding-inline: 16px;
+}
+
+
+
+/*
+
+  $tl: #0A1832; // Top-Left
+  $tr: #1A3D63; // Top-Right
+  $bl: #1A3D63; // Bottom-Left
+  $br: #4A7FA7; // Bottom-Right
+  
+  $spread: 85%;
+  
+  background-color: 
+   // 1. Top-Left (#0A1832)
+    radial-gradient(circle at 0% 0%, $tl 0%, transparent $spread),
+    
+   // 2. Top-Right (#1A3D63) 
+    radial-gradient(circle at 100% 0%, $tr 0%, transparent $spread),
+    
+    // 3. Bottom-Left (#1A3D63)
+    radial-gradient(circle at 0% 100%, $bl 0%, transparent $spread),
+    
+    // 4. Bottom-Right (#4A7FA7)
+    radial-gradient(circle at 100% 100%, $br 0%, transparent $spread);
+    
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+
+*/
