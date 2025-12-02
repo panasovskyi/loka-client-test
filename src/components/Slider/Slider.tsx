@@ -1,4 +1,4 @@
-import Card from '../Card/Card';
+import {Card} from '../Card/Card';
 import styles from './Slider.module.scss';
 
 export const Slider = () => {
@@ -9,7 +9,7 @@ export const Slider = () => {
           {Array.from({ length: 10 }, (_, index) => index + 1).map(el => (
             <li key={el} className={styles.slider__item}>
               {' '}
-              <Card />{' '}
+              <Card order={false} />{' '}
             </li>
           ))}
         </ul>
